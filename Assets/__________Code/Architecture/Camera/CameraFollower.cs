@@ -29,7 +29,7 @@ public class CameraFollower : MonoBehaviour
     {
         if (PlayerSinglton.IsGood)
         {
-            lastTargetPosition = PlayerSinglton.PlayerPosition;
+            lastTargetPosition = PlayerSinglton.CamPosition.position;
         }
 
         var pX = Mathf.Clamp((Input.mousePosition.x / Screen.width * 2 - 1) * screenBorder, -1, 1);

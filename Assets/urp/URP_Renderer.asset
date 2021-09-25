@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: URP_Renderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 8679257809159726477}
   - {fileID: 2347310441794708234}
-  m_RendererFeatureMap: 8d250025feea72780a23bd0469529320
+  m_RendererFeatureMap: 0a23bd0469529320
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:

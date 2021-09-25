@@ -12,6 +12,9 @@ public class PlayerSinglton : MonoBehaviour
     public static PlayerHittable PlayerHealth => thePlayer.playerHealth;
     public PlayerHittable playerHealth;
 
+    public static Transform CamPosition => thePlayer.camPosition;
+    public Transform camPosition;
+
     void Awake()
     {
         thePlayer = this;
