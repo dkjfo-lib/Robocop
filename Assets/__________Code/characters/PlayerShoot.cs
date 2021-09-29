@@ -17,6 +17,10 @@ public class PlayerShoot : MonoBehaviour
     public float accuracityReplanishment = 1;
     public float currentAccuracity = 1;
 
+    bool HasAimPoint => CamMonitor.IsHitting;
+    Vector3 AimPoint => CamMonitor.CamHitPosition;
+    Vector3 AimDirection => CamMonitor.CamDirection;
+
     Weapon currentWeapon => allWeapons[currentWeaponId];
     bool isInMenu => Time.timeScale == 0;
 
@@ -43,9 +47,31 @@ public class PlayerShoot : MonoBehaviour
         currentAccuracity += accuracityReplanishment * Time.fixedDeltaTime;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        if (HasAimPoint)
+        {
+            Gizmos.DrawLine(transform.position, AimPoint);
+        }
+        else
+        {
+            Gizmos.DrawLine(transform.position, transform.position + transform.forward * 100);
+        }
+    }
+
     void Update()
     {
         if (isInMenu) return;
+
+        if (HasAimPoint)
+        {
+            transform.forward = AimPoint - transform.position;
+        }
+        else
+        {
+            transform.forward = AimDirection;
+        }
 
         // change weapon
         if (Input.GetAxis("Mouse ScrollWheel") > 0)

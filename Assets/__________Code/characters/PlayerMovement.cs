@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour, IMovement
     public float speed = 200;
     public float speedMult = .7f;
     [Space]
+    public float torque = 300;
+    [Space]
     public float speedMultInAir = .98f;
     public float controlInAir = .2f;
     public float jumpForce = 200;
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     Rigidbody rb;
     GroundDetector gd;
 
-    Vector3 input;
+    Vector4 input;
     public Vector3 CurrentInput => input;
 
     private void Start()
@@ -53,6 +55,10 @@ public class PlayerMovement : MonoBehaviour, IMovement
                 var newMovementXZ = rb.velocity + addMovementXZ;
                 rb.velocity = newMovementXZ;
             }
+            if (input.w != 0)
+            {
+                rb.AddTorque(new Vector3(0, input.w * torque * Time.fixedDeltaTime, 0), ForceMode.Acceleration);
+            }
             rb.velocity = new Vector3(rb.velocity.x * speedMult, rb.velocity.y, rb.velocity.z * speedMult);
             // move y
             if (input.y != 0)
@@ -76,19 +82,23 @@ public class PlayerMovement : MonoBehaviour, IMovement
         }
     }
 
-    private Vector3 CreateInput()
+    private Vector4 CreateInput()
     {
-        input = Vector3.zero;
+        input = Vector4.zero;
         if (Input.GetKey(KeyCode.A))
-            input -= Vector3.right;
+            input -= new Vector4(1, 0, 0, 0);
         if (Input.GetKey(KeyCode.D))
-            input += Vector3.right;
+            input += new Vector4(1, 0, 0, 0);
         if (Input.GetKey(KeyCode.W))
-            input += Vector3.forward;
+            input += new Vector4(0, 0, 1, 0);
         if (Input.GetKey(KeyCode.S))
-            input -= Vector3.forward;
+            input -= new Vector4(0, 0, 1, 0);
+        if (Input.GetKey(KeyCode.Q))
+            input -= new Vector4(0, 0, 0, 1);
+        if (Input.GetKey(KeyCode.E))
+            input += new Vector4(0, 0, 0, 1);
         if (Input.GetKey(KeyCode.Space))
-            input -= Vector3.up;
+            input += new Vector4(0, 1, 0, 0);
         return input;
     }
 }
