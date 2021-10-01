@@ -68,7 +68,7 @@ public class CamMonitor : MonoBehaviour
         return hitPointPercent;
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if (IsHitting)
         {

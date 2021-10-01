@@ -47,19 +47,6 @@ public class PlayerShoot : MonoBehaviour
         currentAccuracity += accuracityReplanishment * Time.fixedDeltaTime;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        if (HasAimPoint)
-        {
-            Gizmos.DrawLine(transform.position, AimPoint);
-        }
-        else
-        {
-            Gizmos.DrawLine(transform.position, transform.position + transform.forward * 100);
-        }
-    }
-
     void Update()
     {
         if (isInMenu) return;
@@ -183,6 +170,19 @@ public class PlayerShoot : MonoBehaviour
         {
             Addon_AmmoCountOutput.value = currentWeapon.primaryFire.ammoInClip;
             Addon_AmmoCountOutput.maxValue = currentWeapon.primaryFire.clipSize;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        if (HasAimPoint)
+        {
+            Gizmos.DrawLine(transform.position, AimPoint);
+        }
+        else
+        {
+            Gizmos.DrawLine(transform.position, transform.position + transform.forward * 100);
         }
     }
 }
