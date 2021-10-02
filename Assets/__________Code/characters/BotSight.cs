@@ -22,7 +22,7 @@ public class BotSight : MonoBehaviour, IBotSight
     public float dotProductToPlayer => thePlayer != null ?
         Vector3.Dot(
             new Vector3(transform.forward.normalized.x, 0, transform.forward.normalized.z),
-            new Vector3(directionToPlayer.normalized.x, 0, directionToPlayer.normalized.z)) :
+            new Vector3(directionToPlayer.x, 0, directionToPlayer.z)) :
         -2;
 
     void Start()
@@ -80,7 +80,7 @@ public class BotSight : MonoBehaviour, IBotSight
     {
         if (!PlayerSinglton.IsGood) return;
 
-        var player = collision.transform.parent.parent.
+        var player = collision.transform.
             GetComponent<PlayerSinglton>();
         if (player == null) return;
 

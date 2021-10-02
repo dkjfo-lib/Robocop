@@ -30,7 +30,7 @@ public class BotMovement : MonoBehaviour, IBotMovement
         NavMeshAgent.stoppingDistance = attackRange;
 
         StartCoroutine(KeepWalking());
-        StartCoroutine(SoundWalking());
+        //StartCoroutine(SoundWalking());
     }
 
     IEnumerator SoundWalking()
@@ -53,6 +53,7 @@ public class BotMovement : MonoBehaviour, IBotMovement
             {
                 if (!IsEnemyInRangeForAttack(BotSight.distanceToPlayer))
                 {
+                    Debug.Log("Kill!");
                     NavMeshAgent.SetDestination(PlayerSinglton.PlayerPosition);
                 }
                 yield return new WaitForSeconds(courseUpdateTime);
