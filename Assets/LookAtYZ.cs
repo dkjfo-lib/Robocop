@@ -14,7 +14,6 @@ public class LookAtYZ : MonoBehaviour
     void Start()
     {
         offset = Vector3.SignedAngle(PlaneDirection, transform.up, transform.forward);
-        Debug.Log(offset);
     }
 
     float val(float da) => -da - offset;
@@ -22,7 +21,6 @@ public class LookAtYZ : MonoBehaviour
     void Update()
     {
         var angleZ = Vector3.SignedAngle(PlaneDirection, transform.up, transform.forward);
-        Debug.Log(val(angleZ));
 
         if (val(angleZ) < 1 && val(angleZ) > -1) return;
 
@@ -30,11 +28,6 @@ public class LookAtYZ : MonoBehaviour
             transform.rotation.eulerAngles.x,
             transform.rotation.eulerAngles.y,
             transform.rotation.eulerAngles.z + val(angleZ)));
-
-        //target.localRotation = Quaternion.Euler(new Vector3(
-        //    target.rotation.eulerAngles.x,
-        //    target.rotation.eulerAngles.y - angleZ,
-        //    target.rotation.eulerAngles.z));
     }
 
     private void OnDrawGizmosSelected()

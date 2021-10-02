@@ -10,9 +10,13 @@ public class LegTargetCaster : MonoBehaviour
     [SerializeField] float updateTime = .1f;
     [SerializeField] float raycastDepth = 10f;
 
-    void Start()
+    void Awake()
     {
         CalculateTargetPosition();
+    }
+
+    void Start()
+    {
         StartCoroutine(UpdateTargetPosition());
     }
 
