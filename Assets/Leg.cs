@@ -61,12 +61,12 @@ public class Leg : MonoBehaviour
         IsWalking = true;
 
         var lerp = 0f;
-        var lerpV = 0f;
+        //var lerpV = 0f;
         var startPos = target.transform.position;
         var endPos = startPos + direction;
 
-        var startRot = target.eulerAngles;
-        var endRot = transform.eulerAngles + targetEulerOffset;
+        //var startRot = target.eulerAngles;
+        //var endRot = transform.eulerAngles + targetEulerOffset;
         //while (lerpV < .5f)
         //{
         //    Vector3 newPos = startPos;
