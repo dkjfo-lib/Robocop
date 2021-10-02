@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BotStats: {fileID: 6485937326705238588}
+  offsetY: 2
+  additionalRaycastLength: 1
 --- !u!135 &7277709348268646264
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -395,7 +397,7 @@ MonoBehaviour:
   courseUpdateTime: 0.1
   BotSight: {fileID: 7122311011333054768}
   botStats: {fileID: 6485937326705238588}
-  inAttack: 1
+  inAttack: 0
   Addon_Pipe_SoundsPlay: {fileID: 0}
   Addon_stepSound: {fileID: 0}
 --- !u!114 &6485937326705238588
@@ -414,11 +416,12 @@ MonoBehaviour:
   BlindCloseRange: 2
   SightAngleDotProd: -1
   MovementSpeed: 10
-  AttackRange: 25
-  AttackAngleDotProd: 0.9
+  RotationSpeed: 90
+  AttackRange: 20
+  AttackAngleDotProd: 0.97
   Weapon: {fileID: 11400000, guid: 55d49dd3979410c4284254cee0a7a992, type: 2}
-  BotAimTime: 0.75
-  ShotsInValley: 1
+  BotAimTime: 2
+  ShotsInValley: 10
 --- !u!195 &482622911076405078
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -427,7 +430,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4893826401207430420}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 2
   m_Speed: 3.5
   m_Acceleration: 8
@@ -439,7 +442,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 5
   m_BaseOffset: -0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 32
   m_ObstacleAvoidanceType: 4
 --- !u!1 &5598455607884664201
 GameObject:
@@ -482,7 +485,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6035566847717354638}
-  - component: {fileID: 6873990588698520068}
   m_Layer: 0
   m_Name: LightHost
   m_TagString: Untagged
@@ -505,18 +507,6 @@ Transform:
   m_Father: {fileID: 4649246746672436291}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6873990588698520068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773853301591796549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3006d5d323006224fa34d2ae5447f3b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7628279874697639255
 GameObject:
   m_ObjectHideFlags: 0

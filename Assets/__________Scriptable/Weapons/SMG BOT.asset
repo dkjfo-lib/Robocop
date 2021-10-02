@@ -19,7 +19,7 @@ MonoBehaviour:
       count: 2
     delayBetweenProjectiles: 0.001
     accuracity: 0.75
-    shotsPerSecond: 8
+    shotsPerSecond: 16
     shotCost: 1
     clipSize: 6
     ammoInClip: 0

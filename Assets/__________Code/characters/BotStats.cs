@@ -10,6 +10,7 @@ public class BotStats : MonoBehaviour
     public float SightAngleDotProd = .25f;
     [Space]
     public float MovementSpeed = 10;
+    public float RotationSpeed = 720;
     [Space]
     public float AttackRange = 5;
     [Range(-1, 1)]

@@ -1047,7 +1047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8810771754888808951}
-  m_Layer: 15
+  m_Layer: 7
   m_Name: GroundBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,8 @@ GameObject:
   - component: {fileID: 7906869204201691362}
   - component: {fileID: 2031876973999333475}
   - component: {fileID: 909884432939624716}
-  m_Layer: 7
+  - component: {fileID: 61248286}
+  m_Layer: 15
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,6 +1161,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &61248286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057880236098112629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5.5, z: 3}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &2575559772332063688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5738049839889072733}
   - component: {fileID: 6626748683618940528}
-  m_Layer: 15
+  m_Layer: 7
   m_Name: GroundBox (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,6 +1218,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.7, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1716034285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666508898617966285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b8da55e9609304ba7cad76c1685e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 10
 --- !u!1 &3121468807116308986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,19 +1555,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1708177, y: 3.3842204, z: 1.1241529}
   m_Center: {x: 1.665898, y: 1.6955165, z: -0.06207651}
---- !u!114 &1716034285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2666508898617966285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b8da55e9609304ba7cad76c1685e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 10
 --- !u!1 &5335836710909456512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526138229120150517}
   - component: {fileID: 9199157881880664956}
-  m_Layer: 15
+  m_Layer: 7
   m_Name: GroundBox (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

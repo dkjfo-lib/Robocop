@@ -5,9 +5,11 @@ using UnityEngine;
 public class BotSight : MonoBehaviour, IBotSight
 {
     public BotStats BotStats;
-    public float sightRange => BotStats.SightRange;
-    public float blindCloseRange => BotStats.BlindCloseRange;
-    public float sightDotProduct => BotStats.SightAngleDotProd;
+    float sightRange => BotStats.SightRange;
+    float blindCloseRange => BotStats.BlindCloseRange;
+    float sightDotProduct => BotStats.SightAngleDotProd;
+    public float offsetY = 1;
+    public float additionalRaycastLength = 1;
 
     PlayerSinglton thePlayer;
     bool canSee = false;
@@ -16,7 +18,7 @@ public class BotSight : MonoBehaviour, IBotSight
     public bool EnemyIsNear => thePlayer != null;
 
     // "Vector3.up * 1" due to error in character's y coordinate
-    public Vector3 vectorToPlayer => thePlayer.transform.position + Vector3.up * 1 - transform.position;
+    public Vector3 vectorToPlayer => thePlayer.transform.position + Vector3.up * offsetY - transform.position;
     public Vector3 directionToPlayer => vectorToPlayer.normalized;
     public float distanceToPlayer => vectorToPlayer.magnitude;
     public float dotProductToPlayer => thePlayer != null ?
@@ -50,21 +52,12 @@ public class BotSight : MonoBehaviour, IBotSight
             {
                 Vector3 origin = transform.position + directionToPlayer * blindCloseRange;
                 Vector3 direction = directionToPlayer;
-                RaycastHit raycastHit;
-                float castRadius = distanceToPlayer - blindCloseRange + .75f;
-                var hit = Physics.Raycast(origin, direction, out raycastHit, castRadius, Layers.PlayerAndGround);
+                float castRadius = distanceToPlayer - blindCloseRange + additionalRaycastLength;
 
-                if (hit)
+                if (Physics.Raycast(origin, direction, out RaycastHit raycastHit, castRadius, Layers.PlayerAndGround))
                 {
-                    var hitted = raycastHit.transform;
-                    if (raycastHit.transform != null)
-                    {
-                        canSee = raycastHit.transform.GetComponent<PlayerSinglton>() != null;
-                    }
-                    else
-                    {
-                        canSee = false;
-                    }
+                    canSee = true;
+                    canSee = raycastHit.transform.GetComponent<PlayerSinglton>() != null;
                 }
                 else
                 {

@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class BotMovement : MonoBehaviour, IBotMovement
 {
     public float courseUpdateTime = .1f;
-    public float attackAngleDotProd => botStats.AttackAngleDotProd;
-    public float attackRange => botStats.AttackRange;
+    float attackAngleDotProd => botStats.AttackAngleDotProd;
+    float attackRange => botStats.AttackRange;
+    float rotationSpeed => botStats.RotationSpeed;
     [Space]
     public BotSight BotSight;
     public BotStats botStats;
     [Space]
-    public bool inAttack = true;
+    public bool inAttack = false;
     [Space]
     public Pipe_SoundsPlay Addon_Pipe_SoundsPlay;
     public ClipsCollection Addon_stepSound;
@@ -28,6 +29,7 @@ public class BotMovement : MonoBehaviour, IBotMovement
         NavMeshAgent = GetComponent<NavMeshAgent>();
         NavMeshAgent.speed = botStats.MovementSpeed;
         NavMeshAgent.stoppingDistance = attackRange;
+        NavMeshAgent.angularSpeed = rotationSpeed;
 
         StartCoroutine(KeepWalking());
         //StartCoroutine(SoundWalking());
@@ -53,7 +55,6 @@ public class BotMovement : MonoBehaviour, IBotMovement
             {
                 if (!IsEnemyInRangeForAttack(BotSight.distanceToPlayer))
                 {
-                    Debug.Log("Kill!");
                     NavMeshAgent.SetDestination(PlayerSinglton.PlayerPosition);
                 }
                 yield return new WaitForSeconds(courseUpdateTime);
