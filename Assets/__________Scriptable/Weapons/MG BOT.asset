@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcab47d48857e5642a386cd06adb3c0b, type: 3}
-  m_Name: SMG BOT
+  m_Name: MG BOT
   m_EditorClassIdentifier: 
-  weaponName: SMG bot
+  weaponName: MG bot
   primaryFire:
     bursts:
     - projectile: {fileID: 6389493635302546921, guid: 98174b05d53c57b4f9d6fa26b4e5e275, type: 3}
-      count: 1
+      count: 3
     delayBetweenProjectiles: 0.001
     accuracity: 0.75
     shotsPerSecond: 16

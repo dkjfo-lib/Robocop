@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 372285217853540880}
-  length: 1
+  length: 2
 --- !u!54 &5977442985457239805
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d75b580366bc624fbb15a43535cdfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.75
+  damage: 1
   speed: 60
   timeToLive: 0.75
   FactionToHit: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 372285217853540880}
-  length: 1
+  length: 2
 --- !u!54 &5977442985457239805
 Rigidbody:
   m_ObjectHideFlags: 0
