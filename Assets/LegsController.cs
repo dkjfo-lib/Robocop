@@ -9,14 +9,14 @@ public class LegsController : MonoBehaviour
     public Leg[] pair1;
     public Leg[] pair2;
 
-    float offsetY = 0;
+    Vector3 offsetY;
 
     private void Start()
     {
-        offsetY = GetY() - controlledObj.position.y;
+        offsetY = GetY() - controlledObj.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!LegsAreMoving(pair2) && !pair1.All(s => !s.NeedsWalking && !s.IsWalking))
         {
@@ -33,23 +33,30 @@ public class LegsController : MonoBehaviour
             }
         }
 
-        controlledObj.position = new Vector3(controlledObj.position.x, GetY() + offsetY, controlledObj.position.z);
+        controlledObj.position = GetY() + offsetY;
     }
 
     bool LegsAreMoving(IEnumerable<Leg> legs) => !legs.All(s => !s.IsWalking);
 
-    float GetY()
+    Vector3 GetY()
     {
+        Vector3 pos = Vector3.zero;
         float posY = 0;
         foreach (var item in pair1)
         {
+            pos += item.targetCaster.targetPosition;
+            pos += item.feetIK.Target.position;
             posY += item.feetIK.Target.position.y;
         }
         foreach (var item in pair2)
         {
+            pos += item.targetCaster.targetPosition;
+            pos += item.feetIK.Target.position;
             posY += item.feetIK.Target.position.y;
         }
+        pos /= (pair1.Length + pair2.Length) * 2;
         posY /= (pair1.Length + pair2.Length);
-        return posY;
+        pos.y = posY;
+        return pos;
     }
 }

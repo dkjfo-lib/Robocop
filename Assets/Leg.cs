@@ -67,34 +67,34 @@ public class Leg : MonoBehaviour
 
         var startRot = target.eulerAngles;
         var endRot = transform.eulerAngles + targetEulerOffset;
-        while (lerpV < .5f)
-        {
-            Vector3 newPos = startPos;
-            newPos -= look.transform.up.normalized * Mathf.Sin(lerpV * Mathf.PI) * stepHeight;
-            target.transform.position = newPos;
+        //while (lerpV < .5f)
+        //{
+        //    Vector3 newPos = startPos;
+        //    newPos -= look.transform.up.normalized * Mathf.Sin(lerpV * Mathf.PI) * stepHeight;
+        //    target.transform.position = newPos;
 
-            lerpV += Time.deltaTime * legSpeed;
-            yield return new WaitForEndOfFrame();
-        }
+        //    lerpV += Time.deltaTime * legSpeed;
+        //    yield return new WaitForEndOfFrame();
+        //}
         while (lerp < 1)
         {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, lerp);
-            newPos -= look.transform.up.normalized * stepHeight;
+            newPos -= look.transform.up.normalized * Mathf.Sin(lerp * Mathf.PI) * stepHeight;
             target.transform.position = newPos;
-            target.eulerAngles = Vector3.Lerp(startRot, endRot, lerp);
+            //target.eulerAngles = Vector3.Lerp(startRot, endRot, lerp);
 
             lerp += Time.deltaTime * legSpeed;
             yield return new WaitForEndOfFrame();
         }
-        while (lerpV < 1f)
-        {
-            Vector3 newPos = endPos;
-            newPos -= look.transform.up.normalized * Mathf.Sin(lerpV * Mathf.PI) * stepHeight;
-            target.transform.position = newPos;
+        //while (lerpV < 1f)
+        //{
+        //    Vector3 newPos = endPos;
+        //    newPos -= look.transform.up.normalized * Mathf.Sin(lerpV * Mathf.PI) * stepHeight;
+        //    target.transform.position = newPos;
 
-            lerpV += Time.deltaTime * legSpeed;
-            yield return new WaitForEndOfFrame();
-        }
+        //    lerpV += Time.deltaTime * legSpeed;
+        //    yield return new WaitForEndOfFrame();
+        //}
         target.transform.position = endPos;
         IsWalking = false;
     }

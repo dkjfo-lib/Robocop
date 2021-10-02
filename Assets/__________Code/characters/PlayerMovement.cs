@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         rb = GetComponent<Rigidbody>();
         gd = GetComponentInChildren<GroundDetector>();
-        StartCoroutine(SoundWalking());
+        //StartCoroutine(SoundWalking());
     }
 
     IEnumerator SoundWalking()
