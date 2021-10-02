@@ -33,16 +33,13 @@ public class CamMonitor : MonoBehaviour
         GetComponent<MeshRenderer>().material = material;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var deltaPoint = GetDeltaPoint();
         if (deltaPoint.x > 1 || deltaPoint.x < 0 || deltaPoint.y > 1 || deltaPoint.y < 0) return;
 
         var renderTexturePixelSize = new Vector2(renderTexture.width, renderTexture.height);
         var pixelPoint = renderTexturePixelSize * deltaPoint;
-
-        //Debug.Log(deltaPoint);
-        //Debug.Log(pixelPoint);
 
         Ray ray = targetCam.ScreenPointToRay(pixelPoint);
         if (Physics.Raycast(ray, out RaycastHit hit, 100, Layers.CharactersAndGround))
@@ -64,7 +61,6 @@ public class CamMonitor : MonoBehaviour
         var hitPointLocal = transform.worldToLocalMatrix * hitPoint;
         var hitPointLocal2D = new Vector2(hitPointLocal.x, hitPointLocal.z) + Vector2.one * .2f;
         var hitPointPercent = hitPointLocal2D / .4f;
-
         return hitPointPercent;
     }
 

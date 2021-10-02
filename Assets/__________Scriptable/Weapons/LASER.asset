@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcab47d48857e5642a386cd06adb3c0b, type: 3}
-  m_Name: MG
+  m_Name: LASER
   m_EditorClassIdentifier: 
-  weaponName: MG
+  weaponName: SMG bot
   primaryFire:
     bursts:
-    - projectile: {fileID: 6389493635302546921, guid: 72a4983e4cc4e024a914e2897c241078, type: 3}
-      count: 3
+    - projectile: {fileID: 6389493635302546921, guid: 98174b05d53c57b4f9d6fa26b4e5e275, type: 3}
+      count: 1
     delayBetweenProjectiles: 0.001
-    accuracity: 0.93
-    shotsPerSecond: 14
-    shotCost: 1
-    clipSize: 28
-    ammoInClip: 12
-    reloadTime: 0.75
+    accuracity: 1
+    shotsPerSecond: 1000
+    shotCost: 0
+    clipSize: 6
+    ammoInClip: 0
+    reloadTime: 2
     fireSound: {fileID: 11400000, guid: d4b6780e11cb21b43bf145d5027b01ac, type: 2}

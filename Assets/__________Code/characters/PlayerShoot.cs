@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public Weapon[] allWeapons;
-    public GameObjectArr[] allWeaponsModels;
+    //public GameObjectArr[] allWeaponsModels;
     [Space]
     public int currentWeaponId = 0;
     [Space]
@@ -34,11 +34,11 @@ public class PlayerShoot : MonoBehaviour
             Addon_AmmoCountOutput.maxValue = currentWeapon.primaryFire.clipSize;
         }
 
-        foreach (var weapon in allWeaponsModels)
-        {
-            weapon.SetActive(false);
-        }
-        allWeaponsModels[currentWeaponId].SetActive(true);
+        //foreach (var weapon in allWeaponsModels)
+        //{
+        //    weapon.SetActive(false);
+        //}
+        //allWeaponsModels[currentWeaponId].SetActive(true);
     }
 
     private void FixedUpdate()
@@ -63,7 +63,7 @@ public class PlayerShoot : MonoBehaviour
         // change weapon
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            allWeaponsModels[currentWeaponId].SetActive(false);
+            //allWeaponsModels[currentWeaponId].SetActive(false);
             currentWeaponId++;
             if (currentWeaponId > allWeapons.Length - 1)
                 currentWeaponId = 0;
@@ -72,7 +72,7 @@ public class PlayerShoot : MonoBehaviour
                 StopCoroutine(currentAction);
                 canShoot = true;
             }
-            allWeaponsModels[currentWeaponId].SetActive(true);
+            //allWeaponsModels[currentWeaponId].SetActive(true);
 
             if (Addon_AmmoCountOutput != null)
             {
@@ -82,7 +82,7 @@ public class PlayerShoot : MonoBehaviour
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            allWeaponsModels[currentWeaponId].SetActive(false);
+            //allWeaponsModels[currentWeaponId].SetActive(false);
             currentWeaponId--;
             if (currentWeaponId < 0)
                 currentWeaponId = allWeapons.Length - 1;
@@ -91,7 +91,7 @@ public class PlayerShoot : MonoBehaviour
                 StopCoroutine(currentAction);
                 canShoot = true;
             }
-            allWeaponsModels[currentWeaponId].SetActive(true);
+            //allWeaponsModels[currentWeaponId].SetActive(true);
 
             if (Addon_AmmoCountOutput != null)
             {

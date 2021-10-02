@@ -9,11 +9,12 @@ public class LegsController : MonoBehaviour
     public Leg[] pair1;
     public Leg[] pair2;
 
-    Vector3 offsetY;
+    Vector3 offsetPosition;
+    [Range(0, 1)] public float roughness = .5f;
 
     private void Start()
     {
-        offsetY = GetY() - controlledObj.position;
+        offsetPosition = GetMediumPosition() - controlledObj.position;
     }
 
     void FixedUpdate()
@@ -33,12 +34,12 @@ public class LegsController : MonoBehaviour
             }
         }
 
-        controlledObj.position = GetY() + offsetY;
+        controlledObj.position = Vector3.Lerp(controlledObj.position, GetMediumPosition() + offsetPosition, roughness);
     }
 
     bool LegsAreMoving(IEnumerable<Leg> legs) => !legs.All(s => !s.IsWalking);
 
-    Vector3 GetY()
+    Vector3 GetMediumPosition()
     {
         Vector3 pos = Vector3.zero;
         float posY = 0;

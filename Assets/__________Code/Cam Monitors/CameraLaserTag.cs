@@ -9,13 +9,16 @@ public class CameraLaserTag : MonoBehaviour
 
     public int maxDistance = 100;
 
-    void Update()
+    void FixedUpdate()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, Layers.UI))
         {
             IsHitting = true;
             CamHitPosition = hit.point;
+
+            Debug.Log(hit.point);
+            Debug.Log(hit.point - hit.transform.position);
         }
         else
         {

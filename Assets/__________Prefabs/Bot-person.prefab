@@ -48,7 +48,7 @@ MonoBehaviour:
   maxhp: 0
   hp: 2
   faction: 3
-  Addon_HPValueOutput: {fileID: 11400000, guid: 5493bb20cbea8a94b91cfbea3f2e01a0, type: 2}
+  Addon_HPValueOutput: {fileID: 0}
   addon_BotNavMesh: {fileID: 7850705121605553848}
   Pipe_SoundsPlay: {fileID: 11400000, guid: 49c7055d96e6a844d8e1e445464b45ca, type: 2}
   sounds_hit: {fileID: 11400000, guid: 5fc95cab4bb8cbd448f8d107dbf381be, type: 2}
