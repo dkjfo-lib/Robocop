@@ -17,8 +17,8 @@ public class CameraLaserTag : MonoBehaviour
             IsHitting = true;
             CamHitPosition = hit.point;
 
-            Debug.Log(hit.point);
-            Debug.Log(hit.point - hit.transform.position);
+            //Debug.Log(hit.point);
+            //Debug.Log(hit.point - hit.transform.position);
         }
         else
         {
