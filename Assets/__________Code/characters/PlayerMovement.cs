@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour, IMovement
 {
     public float speed = 200;
-    public float speedMult = .7f;
+    [Range(0, 1)] public float speedMult = .7f;
     [Space]
     public float torque = 300;
     [Space]
-    public float speedMultInAir = .98f;
-    public float controlInAir = .2f;
+    [Range(0, 1)] public float speedMultInAir = .98f;
+    [Range(0, 1)] public float controlInAir = .2f;
     public float jumpForce = 200;
     [Space]
     public Pipe_SoundsPlay Addon_Pipe_SoundsPlay;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         rb = GetComponent<Rigidbody>();
         gd = GetComponentInChildren<GroundDetector>();
+        rb.centerOfMass = Vector3.zero;
         //StartCoroutine(SoundWalking());
     }
 
@@ -57,7 +58,8 @@ public class PlayerMovement : MonoBehaviour, IMovement
             }
             if (input.w != 0)
             {
-                rb.AddTorque(new Vector3(0, input.w * torque * Time.fixedDeltaTime, 0), ForceMode.Acceleration);
+                transform.Rotate(Vector3.up, input.w * torque * Time.fixedDeltaTime);
+                //rb.AddTorque(new Vector3(0, input.w * torque * Time.fixedDeltaTime, 0), ForceMode.Acceleration);
             }
             rb.velocity = new Vector3(rb.velocity.x * speedMult, rb.velocity.y, rb.velocity.z * speedMult);
             // move y
