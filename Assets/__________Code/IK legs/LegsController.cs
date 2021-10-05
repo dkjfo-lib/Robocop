@@ -10,34 +10,49 @@ public class LegsController : MonoBehaviour
     public Leg[] pair2;
 
     Vector3 offsetPosition;
+    public float offsetHeight = 0;
     [Range(0, 1)] public float roughness = .5f;
 
+    Leg[] f;
+    Leg[] s;
     private void Start()
     {
         offsetPosition = GetMediumPosition() - controlledObj.position;
+        f = pair1;
+        s = pair2;
     }
 
     void FixedUpdate()
     {
-        if (!LegsAreMoving(pair2) && !pair1.All(s => !s.NeedsWalking && !s.IsWalking))
+        if (NeedsStep(pair1) && NeedsStep(pair2) && AllowedToStep(s))
         {
-            foreach (var leg in pair1.Where(s => !s.IsWalking))
-            {
-                leg.Step();
-            }
+            Step(f);
+            f = f == pair1 ? pair2 : pair1;
+            s = s == pair1 ? pair2 : pair1;
         }
-        if (!LegsAreMoving(pair1) && !pair2.All(s => !s.NeedsWalking && !s.IsWalking))
+        else if (ShouldStep(pair1, pair2))
         {
-            foreach (var leg in pair2.Where(s => !s.IsWalking))
-            {
-                leg.Step();
-            }
+            Step(pair1);
+        }
+        else if (ShouldStep(pair2, pair1))
+        {
+            Step(pair2);
         }
 
-        controlledObj.position = Vector3.Lerp(controlledObj.position, GetMediumPosition() + offsetPosition, roughness);
+        controlledObj.position = Vector3.Lerp(controlledObj.position, GetMediumPosition() + offsetPosition + Vector3.up * offsetHeight, roughness);
     }
 
     bool LegsAreMoving(IEnumerable<Leg> legs) => !legs.All(s => !s.IsWalking);
+
+    bool ShouldStep(IEnumerable<Leg> thisLegs, IEnumerable<Leg> otherLegs) => NeedsStep(thisLegs) && AllowedToStep(otherLegs);
+    bool NeedsStep(IEnumerable<Leg> thisLegs) => !thisLegs.All(s => !s.NeedsWalking && !s.IsWalking);
+    bool AllowedToStep(IEnumerable<Leg> otherLegs) => !LegsAreMoving(otherLegs);
+
+    void Step(IEnumerable<Leg> legs)
+    {
+        foreach (var leg in legs.Where(s => !s.IsWalking))
+            leg.Step();
+    }
 
     Vector3 GetMediumPosition()
     {

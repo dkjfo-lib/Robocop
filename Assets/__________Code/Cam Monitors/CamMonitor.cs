@@ -10,27 +10,56 @@ public class CamMonitor : MonoBehaviour
 
     public RenderTexture OriginalRenderTexture;
     public Material OriginalMaterial;
-
-    // mesh -> verts -> planeDeltaPoints -> planeSize
-    MeshFilter meshFilter;
-    Mesh mesh => meshFilter.mesh;
-    Vector2 max = new Vector2(-.2f, .2f);
-    Vector2 planeSize = new Vector2(.4f, .4f);
-
     public Camera targetCam;
     RenderTexture renderTexture => targetCam.targetTexture;
+    [Space]
+    public bool isOn;
+    bool _isOn;
+    public bool isBw;
+    bool _isBw;
+
+    // mesh -> verts -> planeDeltaPoints -> planeSize
+    //MeshFilter meshFilter;
+    //Mesh mesh => meshFilter.mesh;
+    //Vector2 max = new Vector2(-.2f, .2f);
+    //Vector2 planeSize = new Vector2(.4f, .4f);
+
+    Material material;
 
     void Start()
     {
-        meshFilter = GetComponent<MeshFilter>();
+        //meshFilter = GetComponent<MeshFilter>();
 
         var renderTexture = new RenderTexture(OriginalRenderTexture);
         renderTexture.name = "mecha view";
         targetCam.targetTexture = renderTexture;
-        var material = new Material(OriginalMaterial);
+        material = new Material(OriginalMaterial);
         material.name = "mecha view material";
         material.SetTexture("_BaseMap", renderTexture);
         GetComponent<MeshRenderer>().material = material;
+
+        StartCoroutine(KeepOn());
+        StartCoroutine(KeepBW());
+    }
+
+    IEnumerator KeepOn()
+    {
+        while (true)
+        {
+            material.SetInt("_isOn", isOn ? 1 : 0);
+            _isOn = isOn;
+            yield return new WaitUntil(() => _isOn != isOn);
+        }
+    }
+
+    IEnumerator KeepBW()
+    {
+        while (true)
+        {
+            material.SetInt("_isBw", isBw ? 1 : 0);
+            _isBw = isBw;
+            yield return new WaitUntil(() => _isBw != isBw);
+        }
     }
 
     void FixedUpdate()
@@ -69,7 +98,7 @@ public class CamMonitor : MonoBehaviour
         if (IsHitting)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(transform.position, CamHitPosition);
+            Gizmos.DrawLine(targetCam.transform.position, CamHitPosition);
         }
     }
 }

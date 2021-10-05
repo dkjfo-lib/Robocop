@@ -53,7 +53,7 @@ public class BotMovement : MonoBehaviour, IBotMovement
             yield return new WaitUntil(() => !inAttack && BotSight.CanSee);
             while (!inAttack && BotSight.CanSee)
             {
-                if (!IsEnemyInRangeForAttack(BotSight.distanceToPlayer))
+                if (PlayerSinglton.IsGood && !IsEnemyInRangeForAttack(BotSight.distanceToPlayer))
                 {
                     NavMeshAgent.SetDestination(PlayerSinglton.PlayerPosition);
                 }
@@ -64,6 +64,7 @@ public class BotMovement : MonoBehaviour, IBotMovement
 
     void FixedUpdate()
     {
+        if (!PlayerSinglton.IsGood) return;
         if (!inAttack && BotSight.CanSee && !IsEnemyInAngleForAttack())
         {
             var _lookRotation = Quaternion.LookRotation(BotSight.directionToPlayer);

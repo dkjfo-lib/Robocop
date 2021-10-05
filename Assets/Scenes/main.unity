@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.8
+  m_AmbientIntensity: 0.75
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: cf698951406144645ae826296f1b00bc, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1096386318}
-  m_IndirectSpecularColor: {r: 0.40223208, g: 0.46405548, b: 0.53214175, a: 1}
+  m_IndirectSpecularColor: {r: 0.5761766, g: 0.674749, b: 0.6525159, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -287,7 +291,7 @@ GameObject:
   - component: {fileID: 134623579}
   - component: {fileID: 134623581}
   - component: {fileID: 134623580}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +362,7 @@ GameObject:
   - component: {fileID: 224220492}
   - component: {fileID: 224220494}
   - component: {fileID: 224220493}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,13 +435,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245224913}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &245224913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -469,6 +473,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -527,7 +535,7 @@ GameObject:
   - component: {fileID: 280078223}
   - component: {fileID: 280078225}
   - component: {fileID: 280078224}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +620,7 @@ LightingSettings:
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
   m_BakeBackend: 1
-  m_LightmapMaxSize: 1024
+  m_LightmapMaxSize: 64
   m_BakeResolution: 40
   m_Padding: 2
   m_TextureCompression: 1
@@ -672,7 +680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &321850452
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350700427}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412517863}
   - component: {fileID: 412517864}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: MenuControllScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,6 +977,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -1026,6 +1038,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -1085,7 +1101,7 @@ GameObject:
   - component: {fileID: 447989012}
   - component: {fileID: 447989011}
   - component: {fileID: 447989010}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: B return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1240,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 4
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &473215609
 BoxCollider:
@@ -1534,7 +1550,7 @@ GameObject:
   - component: {fileID: 562738418}
   - component: {fileID: 562738420}
   - component: {fileID: 562738419}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,7 +1678,7 @@ GameObject:
   - component: {fileID: 582486913}
   - component: {fileID: 582486915}
   - component: {fileID: 582486914}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: HP txt panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,7 +1749,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21584
+  m_Name: pb_Mesh21574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1788,9 +1804,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -1823,8 +1839,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00000000000000000000000000000000000000000000803f000080bf0000000000000000000080bf000000000000000000002042000000000000000000000000000000000000803f000080bf0000000000000000000080bf000020c200000000000000000000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000000000000803f000020420000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000020c20000803f0000204200000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000000204200000000000020c20000803f000000000000000000000000000000000000803f000080bf000020c200000000000020420000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f000020420000803f000020c20000803f000000000000000000000000000000000000803f000080bf000020c20000803f0000204200000000000020c20000000000000000000080bf0000803f0000000000000000000080bf00002042000000000000000000000000000020c20000000000000000000080bf0000803f0000000000000000000080bf0000000000000000000020420000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000020420000803f000000000000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f0000000000000000000020c2000080bf00000000000000000000000000000000000080bf000080bf0000204200000000000000000000000000000000000080bf00000000000000000000000000000000000080bf000080bf0000000000000000000000000000803f000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000803f000000000000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f000000000000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000000020420000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000204200000000000000000000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00000000000020c2000020420000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00002042000020c20000000000000000000020c200000000000080bf00000000000080bf0000000000000000000080bf00000000000020c20000204200000000000020c200000000000080bf00000000000080bf0000000000000000000080bf000020c2000020c200000000000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000000000000000000002042000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000020c200000000
+    m_DataSize: 1344
+    _typelessdata: 00000000000000000000000000000000000000000000803f000080bf0000000000000000000080bf000000000000000008ad033f0bd7a33c00002042000000000000000000000000000000000000803f000080bf0000000000000000000080bf000020c2000000009b1c7d3f0bd7a33c000000000000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000000000000803f0cad033f8b7e023d000020420000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000020c20000803f9f1c7d3f8b7e023d0000204200000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000bd7a33c0bd7a33c0000204200000000000020c20000803f000000000000000000000000000000000000803f000080bf000020c200000000971cfd3e0bd7a33c000020420000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f97d7a33c8b7e023d000020420000803f000020c20000803f000000000000000000000000000000000000803f000080bf000020c20000803f9f1cfd3e8b7e023d0000204200000000000020c20000000000000000000080bf0000803f0000000000000000000080bf00002042000000000bd7a33c116a543d0000000000000000000020c20000000000000000000080bf0000803f0000000000000000000080bf0000000000000000971cfd3e116a543d000020420000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000020420000803f97d7a33c8b7e823d000000000000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f9f1cfd3e8b7e823d0000000000000000000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000000008ad033f116a543d000000000000000000000000000080bf00000000000000000000000000000000000080bf000080bf00000000000000009b1c7d3f116a543d000000000000803f000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000803f0cad033f8b7e823d000000000000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f9f1c7d3f8b7e823d000000000000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000921c7d3f8274ab3d000020420000803f00000000000000000000803f000000000000803f0000000000000000000080bf00002042000000008c1c7d3f27de0e3f000000000000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00000000000020c208ad033f4e74ab3d000020420000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00002042000020c201ad033f21de0e3f0000000000000000000020c200000000000080bf00000000000080bf0000000000000000000080bf00000000000020c2851cfd3e4e74ab3d0000204200000000000020c200000000000080bf00000000000080bf0000000000000000000080bf000020c2000020c2921cfd3e21de0e3f00000000000000000000000000000000000080bf00000000000080bf0000000000000000000080bf00000000000000000bd7a33c8174ab3d00002042000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000020c200000000ddd7a33c27de0e3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2017,7 +2033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687836726}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2055,7 +2071,7 @@ GameObject:
   - component: {fileID: 745412542}
   - component: {fileID: 745412544}
   - component: {fileID: 745412543}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2146,7 @@ GameObject:
   - component: {fileID: 755779639}
   - component: {fileID: 755779641}
   - component: {fileID: 755779640}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2154,7 +2170,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 5}
+  m_SizeDelta: {x: 7, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755779640
 MonoBehaviour:
@@ -2169,7 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5058824}
+  m_Color: {r: 1, g: 0.6995403, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2210,7 +2226,7 @@ GameObject:
   - component: {fileID: 817324902}
   - component: {fileID: 817324904}
   - component: {fileID: 817324903}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2470,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &864719952
 Transform:
@@ -2548,6 +2564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -2605,6 +2625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2661,7 +2685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 916832886}
   - component: {fileID: 916832887}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,7 +2775,7 @@ GameObject:
   - component: {fileID: 922730873}
   - component: {fileID: 922730875}
   - component: {fileID: 922730874}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2833,7 +2857,7 @@ GameObject:
   - component: {fileID: 937885311}
   - component: {fileID: 937885310}
   - component: {fileID: 937885309}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Input Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3001,6 +3025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -3058,7 +3086,7 @@ GameObject:
   - component: {fileID: 960240415}
   - component: {fileID: 960240417}
   - component: {fileID: 960240416}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3080,7 +3108,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3138,6 +3166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -3194,11 +3226,11 @@ GameObject:
   m_Component:
   - component: {fileID: 975389989}
   m_Layer: 6
-  m_Name: view
+  m_Name: scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &975389989
 Transform:
@@ -3218,7 +3250,7 @@ Transform:
   - {fileID: 1115340884}
   - {fileID: 473215614}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &977053988
 GameObject:
@@ -3231,7 +3263,7 @@ GameObject:
   - component: {fileID: 977053989}
   - component: {fileID: 977053991}
   - component: {fileID: 977053990}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,6 +3347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3376,6 +3412,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -3451,7 +3491,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 4
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!33 &1115340881
 MeshFilter:
@@ -3762,7 +3802,7 @@ GameObject:
   - component: {fileID: 1177929254}
   - component: {fileID: 1177929253}
   - component: {fileID: 1177929252}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: HP sld panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3853,7 +3893,7 @@ GameObject:
   - component: {fileID: 1201391709}
   - component: {fileID: 1201391711}
   - component: {fileID: 1201391710}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3932,6 +3972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3989,6 +4033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -4044,7 +4092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1287689063}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4086,7 +4134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1298536808
 Transform:
   m_ObjectHideFlags: 0
@@ -4102,7 +4150,7 @@ Transform:
   - {fileID: 321850452}
   - {fileID: 1785135528}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1316058475 stripped
 Transform:
@@ -4119,6 +4167,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -4177,6 +4229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -4234,7 +4290,7 @@ GameObject:
   - component: {fileID: 1380610212}
   - component: {fileID: 1380610214}
   - component: {fileID: 1380610213}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4386,7 +4442,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1446924165
 Transform:
@@ -4475,6 +4531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -4532,7 +4592,7 @@ GameObject:
   - component: {fileID: 1522488529}
   - component: {fileID: 1522488531}
   - component: {fileID: 1522488530}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Slider Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4660,7 +4720,7 @@ GameObject:
   - component: {fileID: 1581471744}
   - component: {fileID: 1581471743}
   - component: {fileID: 1581471742}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4762,7 +4822,7 @@ GameObject:
   - component: {fileID: 1602236196}
   - component: {fileID: 1602236198}
   - component: {fileID: 1602236197}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4901,7 @@ GameObject:
   - component: {fileID: 1636917568}
   - component: {fileID: 1636917570}
   - component: {fileID: 1636917569}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: HP txt panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,10 +4973,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2358635992425582827, guid: 062bb0bc3b20cc141bd5e886131ed541, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2358635992848288131, guid: 062bb0bc3b20cc141bd5e886131ed541, type: 3}
       propertyPath: m_Name
       value: GM
@@ -4984,7 +5040,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1660216108
 Transform:
@@ -5073,6 +5129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -5131,7 +5191,7 @@ GameObject:
   - component: {fileID: 1726772531}
   - component: {fileID: 1726772530}
   - component: {fileID: 1726772532}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: HP sld panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5221,6 +5281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -5276,13 +5340,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1763309272}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1763309272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5377,7 +5441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1785135528
 Transform:
   m_ObjectHideFlags: 0
@@ -5636,6 +5700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -5794,6 +5862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot-person (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -5911,7 +5983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927160551}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5955,7 +6027,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1937180104
 Transform:
@@ -6042,7 +6114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1949698695}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: IGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6082,7 +6154,7 @@ GameObject:
   - component: {fileID: 1960287095}
   - component: {fileID: 1960287097}
   - component: {fileID: 1960287096}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Menu BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6157,7 +6229,7 @@ GameObject:
   - component: {fileID: 1967315678}
   - component: {fileID: 1967315680}
   - component: {fileID: 1967315679}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: MenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6236,7 +6308,7 @@ GameObject:
   - component: {fileID: 1968880805}
   - component: {fileID: 1968880807}
   - component: {fileID: 1968880806}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6324,6 +6396,10 @@ PrefabInstance:
     - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_Name
       value: Bot-person (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002649034841828602, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578163086316858970, guid: 288a4dbc751a39e4985e5e55b599920c, type: 3}
       propertyPath: m_RootOrder
@@ -6439,7 +6515,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21790
+  m_Name: pb_Mesh21746
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6494,9 +6570,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -6529,8 +6605,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00000000000000000000000000000000000000000000803f000080bf0000000000000000000080bf000000000000000000002042000000000000000000000000000000000000803f000080bf0000000000000000000080bf000020c200000000000000000000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000000000000803f000020420000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000020c20000803f0000204200000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000000204200000000000020c20000803f000000000000000000000000000000000000803f000080bf000020c200000000000020420000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f000020420000803f000020c20000803f000000000000000000000000000000000000803f000080bf000020c20000803f0000204200000000000020c20000000000000000000080bf0000803f0000000000000000000080bf00002042000000000000000000000000000020c20000000000000000000080bf0000803f0000000000000000000080bf0000000000000000000020420000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000020420000803f000000000000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f0000000000000000000020c2000080bf00000000000000000000000000000000000080bf000080bf0000204200000000000000000000000000000000000080bf00000000000000000000000000000000000080bf000080bf0000000000000000000000000000803f000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000803f000000000000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f000000000000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000000020420000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000204200000000000000000000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00000000000020c2000020420000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00002042000020c20000000000000000000020c200000000000080bf00000000000080bf0000000000000000000080bf00000000000020c20000204200000000000020c200000000000080bf00000000000080bf0000000000000000000080bf000020c2000020c200000000000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000000000000000000002042000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000020c200000000
+    m_DataSize: 1344
+    _typelessdata: 00000000000000000000000000000000000000000000803f000080bf0000000000000000000080bf000000000000000008ad033f0bd7a33c00002042000000000000000000000000000000000000803f000080bf0000000000000000000080bf000020c2000000009b1c7d3f0bd7a33c000000000000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000000000000803f0cad033f8b7e023d000020420000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000020c20000803f9f1c7d3f8b7e023d0000204200000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000bd7a33c0bd7a33c0000204200000000000020c20000803f000000000000000000000000000000000000803f000080bf000020c200000000971cfd3e0bd7a33c000020420000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f97d7a33c8b7e023d000020420000803f000020c20000803f000000000000000000000000000000000000803f000080bf000020c20000803f9f1cfd3e8b7e023d0000204200000000000020c20000000000000000000080bf0000803f0000000000000000000080bf00002042000000000bd7a33c116a543d0000000000000000000020c20000000000000000000080bf0000803f0000000000000000000080bf0000000000000000971cfd3e116a543d000020420000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000020420000803f97d7a33c8b7e823d000000000000803f000020c20000000000000000000080bf0000803f0000000000000000000080bf000000000000803f9f1cfd3e8b7e823d0000000000000000000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000000008ad033f116a543d000000000000000000000000000080bf00000000000000000000000000000000000080bf000080bf00000000000000009b1c7d3f116a543d000000000000803f000020c2000080bf00000000000000000000000000000000000080bf000080bf000020420000803f0cad033f8b7e823d000000000000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f9f1c7d3f8b7e823d000000000000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000921c7d3f8274ab3d000020420000803f00000000000000000000803f000000000000803f0000000000000000000080bf00002042000000008c1c7d3f27de0e3f000000000000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00000000000020c208ad033f4e74ab3d000020420000803f000020c2000000000000803f000000000000803f0000000000000000000080bf00002042000020c201ad033f21de0e3f0000000000000000000020c200000000000080bf00000000000080bf0000000000000000000080bf00000000000020c2851cfd3e4e74ab3d0000204200000000000020c200000000000080bf00000000000080bf0000000000000000000080bf000020c2000020c2921cfd3e21de0e3f00000000000000000000000000000000000080bf00000000000080bf0000000000000000000080bf00000000000000000bd7a33c8174ab3d00002042000000000000000000000000000080bf00000000000080bf0000000000000000000080bf000020c200000000ddd7a33c27de0e3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -6694,7 +6770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6702,7 +6778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6714,7 +6790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327832684213735125, guid: a9a1707fca382de468a89927be1fd9a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

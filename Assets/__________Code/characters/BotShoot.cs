@@ -19,6 +19,7 @@ public class BotShoot : MonoBehaviour
 
     void Update()
     {
+        if (!PlayerSinglton.IsGood) return;
         if (canShoot && BotSight.CanSee && BotMovement.InDistanceForAttack && IsEnemyInAngleForAttack())
         {
             StartCoroutine(ShootWeapon(weapon.primaryFire));
