@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     //public GameObjectArr[] allWeaponsModels;
     [Space]
     public int currentWeaponId = 0;
+    public int buttonId = 0;
     [Space]
     public Pipe_SoundsPlay Pipe_SoundsPlay;
     public Transform gunpoint;
@@ -107,7 +108,7 @@ public class PlayerShoot : MonoBehaviour
             currentAction = StartCoroutine(Reload(currentWeapon.primaryFire));
         }
         // shoot
-        if (canShoot && currentWeapon.HasPrimary && Input.GetMouseButton(0))
+        if (canShoot && currentWeapon.HasPrimary && Input.GetMouseButton(buttonId))
         {
             currentAction = ShotOrReaload(currentWeapon.primaryFire);
         }

@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 2949379753765352260}
   - component: {fileID: 1149336562980101152}
   - component: {fileID: 5977442985457239805}
+  - component: {fileID: -4684258851610368821}
+  - component: {fileID: 5469261222832258972}
   m_Layer: 10
-  m_Name: Bot Shot
+  m_Name: Canon Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +49,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2, z: 6}
+  m_Size: {x: 0.1, y: 0.1, z: 4}
   m_Center: {x: 0, y: 0, z: -1}
 --- !u!114 &6389493635302546921
 MonoBehaviour:
@@ -112,6 +114,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4684258851610368821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128160374494526987}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ea9769b02ee6e4fa2fcbab033a9180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pipe_CamShakes: {fileID: 11400000, guid: 133dbdb3f490cca4dbe55bf0306efab1, type: 2}
+  shake:
+    amplitude: 0.2
+    duration: 0.1
+    shakesPerSecond: 1
+  onStart: 1
+  onDestroy: 0
+--- !u!114 &5469261222832258972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128160374494526987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281d4cde922afa34995d5727b4570ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList:
+  - item: {fileID: 5767152554194121552, guid: 14da1ba3100251647bb827a96bc20ec9, type: 3}
+    deleteAfter: 1
+  - item: {fileID: 4724050676382152508, guid: bfa9aae64a968914bb9b317c68fac10f, type: 3}
+    deleteAfter: 1
 --- !u!1 &5980423940985532578
 GameObject:
   m_ObjectHideFlags: 0

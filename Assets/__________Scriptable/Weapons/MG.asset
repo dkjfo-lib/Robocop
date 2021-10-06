@@ -18,10 +18,10 @@ MonoBehaviour:
     - projectile: {fileID: 6389493635302546921, guid: 72a4983e4cc4e024a914e2897c241078, type: 3}
       count: 3
     delayBetweenProjectiles: 0.001
-    accuracity: 0.93
+    accuracity: 0.97
     shotsPerSecond: 14
     shotCost: 1
-    clipSize: 28
-    ammoInClip: 12
-    reloadTime: 0.75
+    clipSize: 100
+    ammoInClip: 78
+    reloadTime: 2
     fireSound: {fileID: 11400000, guid: d4b6780e11cb21b43bf145d5027b01ac, type: 2}

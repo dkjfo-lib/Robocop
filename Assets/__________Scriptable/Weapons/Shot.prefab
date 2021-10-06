@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d75b580366bc624fbb15a43535cdfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.5
   speed: 120
   timeToLive: 1
   FactionToHit: 0

@@ -10,10 +10,11 @@ public class MechaToggle : MonoBehaviour
     [Space]
     public LegsController LegsController;
     public PlayerMovement PlayerMovement;
-    public PlayerShoot PlayerShoot;
+    public PlayerShoot[] PlayerShoot;
     public MechaHealer MechaHealer;
     public CamMonitor[] monitors;
     public GameObject radar;
+    //public GameObject lightsHealing;
     [Space]
     public bool isOn = true;
 
@@ -40,6 +41,7 @@ public class MechaToggle : MonoBehaviour
         MechaHealer.enabled = false;
         radar.SetActive(true);
         yield return new WaitForSeconds(.5f);
+        //lightsHealing.SetActive(false);
         ToggleMonitors(true);
         yield return new WaitForSeconds(.25f);
         float lerp = 0;
@@ -53,12 +55,12 @@ public class MechaToggle : MonoBehaviour
         isOn = true;
         curProcess = null;
         PlayerMovement.enabled = true;
-        PlayerShoot.enabled = true;
+        ToggleGuns(true);
     }
     IEnumerator TurnOff()
     {
         PlayerMovement.enabled = false;
-        PlayerShoot.enabled = false;
+        ToggleGuns(false);
         radar.SetActive(false);
         yield return new WaitForSeconds(.5f);
         float lerp = 0;
@@ -70,6 +72,7 @@ public class MechaToggle : MonoBehaviour
         }
         LegsController.offsetHeight = mechaHeightOff;
         MechaHealer.enabled = true;
+        //lightsHealing.SetActive(true);
         yield return new WaitForSeconds(.25f);
         ToggleMonitors(false);
         isOn = false;
@@ -81,6 +84,13 @@ public class MechaToggle : MonoBehaviour
         foreach (var monitor in monitors)
         {
             monitor.isOn = value;
+        }
+    }
+    void ToggleGuns(bool value)
+    {
+        foreach (var playerShoot in PlayerShoot)
+        {
+            playerShoot.enabled = value;
         }
     }
 }
