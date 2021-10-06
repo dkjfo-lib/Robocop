@@ -7,6 +7,7 @@ public class UITextValue : MonoBehaviour
 {
     public ClampedValue MonitoredNumber;
     public Text text;
+    public UIClampedValueDisplayMode mode;
 
     float localvalue = -12903;
     float localmaxvalue = -12903;
@@ -25,7 +26,23 @@ public class UITextValue : MonoBehaviour
             localvalue = MonitoredNumber.value;
             localmaxvalue = MonitoredNumber.maxValue;
 
-            text.text = $"{localvalue.ToString("00")}/{localmaxvalue.ToString("00")}";
+            switch (mode)
+            {
+                case UIClampedValueDisplayMode.dash:
+                    text.text = $"{localvalue.ToString("00")}/{localmaxvalue.ToString("00")}";
+                    break;
+                case UIClampedValueDisplayMode.percent:
+                    text.text = $"{(localvalue * 100 / localmaxvalue).ToString("000")}%";
+                    break;
+                default:
+                    break;
+            }
         }
     }
+}
+
+public enum UIClampedValueDisplayMode
+{
+    dash,
+    percent
 }
